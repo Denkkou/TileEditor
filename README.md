@@ -1,23 +1,24 @@
 # TileEditor
- A simple tilemap editor for use with future projects
- 
-Aims to produce custom tilemap data files that can be imported into future projects, such as
- projecting the data in a 3D space to create a tile-based 3D terrain.
+A simple tilemap editor program. It is intended to be used as a tool for developing game levels. It aims
+ to export tilemap data files which can be read by other programs to project their data into a game world. For
+ example, to create terrain by projecting each tile as a quad in 3D space, at their given elevation.
+
+Currently only 32*32 tilemap grids are supported.
 
 Written in C++ using SDL2.
 
-Current grid size is 32*32.
+## Usage
+#### Controls
+Currently only basic inputs are handled for each tool.
+- 1: Raise height 2: Lower height 3: Reset height 4: Add collision 5: Remove collision
+- Q: Set to empty W: Set to soil E: Set to grass R: Set to stone T: Set to path
 
 #### Tile properties
+Each tile has a series of properties. These can be expanded in Tile.h
 - Coordinates in the grid (x, y)
 - Elevation
 - Collision flag
 - Type (Cosmetic; Empty / Soil / Grass / Stone / Path)
-
-## Usage
-Currently only basic inputs are handled for each tool.
-- 1: Raise height 2: Lower height 3: Reset height 4: Add collision 5: Remove collision
-- Q: Set to empty W: Set to soil E: Set to grass R: Set to stone T: Set to path
 
 ## Planned Features
 - Visually display elevation and collision properties on each tile
