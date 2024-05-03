@@ -127,6 +127,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Button.cpp" />
+    <ClCompile Include="ButtonPanel.cpp" />
     <ClCompile Include="EditorSpace.cpp" />
     <ClCompile Include="TileEditor.cpp" />
     <ClCompile Include="Tile.cpp" />
@@ -137,6 +139,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Button.h" />
+    <ClInclude Include="ButtonPanel.h" />
+    <ClInclude Include="Clickable.h" />
     <ClInclude Include="EditorSpace.h" />
     <ClInclude Include="MY_ENUMS.h" />
     <ClInclude Include="Tile.h" />

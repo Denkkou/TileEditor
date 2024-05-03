@@ -5,6 +5,7 @@
 #include <SDL.h>
 #include "Timer.h"
 #include "TileGrid.h"
+#include "ButtonPanel.h"
 #include "MY_ENUMS.h"
 
 #define MAX_KEYS int(256)
@@ -42,6 +43,7 @@ public:
 
 	// Tile Grid
 	TileGrid tileGrid;
+	ButtonPanel buttonPanel;
 
 	void Init();
 	void Run();

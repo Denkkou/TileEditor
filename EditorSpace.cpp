@@ -12,6 +12,7 @@ void EditorSpace::Init()
 
 	// Initialise TileGrid
 	tileGrid.Init();
+	buttonPanel.Init();
 
 	SDL_Log("EditorSpace initialised.");
 }
@@ -152,6 +153,7 @@ void EditorSpace::Input()
 		// Mouse input
 		if (SDL_GetMouseState(&mPosX, &mPosY)) {
 			tileGrid.SetMousePosition(mPosX, mPosY);
+			buttonPanel.SetMousePosition(mPosX, mPosY);
 		}
 
 		switch (event.type) {
@@ -169,6 +171,12 @@ void EditorSpace::Update()
 {
 	// Done every frame
 	tileGrid.Update(isClicked, MARGIN, REGIONSIZE);
+
+	// If a button is clicked, receive the tool to use here, set it in tileGrid
+	int toolToSet = buttonPanel.Update(isClicked);
+	if (toolToSet != -1) {
+		tileGrid.SetTool(toolToSet);
+	}
 }
 
 void EditorSpace::Render()
@@ -178,6 +186,7 @@ void EditorSpace::Render()
 
 	// Container render functions
 	tileGrid.Render(renderer, MARGIN, REGIONSIZE);
+	buttonPanel.Render(renderer);
 
 	SDL_RenderPresent(renderer);
 }

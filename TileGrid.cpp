@@ -102,12 +102,6 @@ void TileGrid::CalcCornerCoords()
 
 }
 
-void TileGrid::SetMousePosition(int x, int y)
-{
-	mPosX = x;
-	mPosY = y;
-}
-
 void TileGrid::Init()
 {
 	// Fill grid with tile objects

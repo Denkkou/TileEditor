@@ -7,15 +7,15 @@
 #include <SDL.h>
 #include "MY_ENUMS.h"
 #include "Tile.h"
+#include "Clickable.h"
 
 #define GRIDXSIZE int(32)
 #define GRIDYSIZE int(32)
 
-class TileGrid
+class TileGrid : public Clickable
 {
 private:
 	int currentTool;
-	int mPosX, mPosY;
 
 	// 2D array of tile objects
 	Tile grid[GRIDXSIZE][GRIDYSIZE];
@@ -33,8 +33,6 @@ public:
 	// of their original height value. Do not do this to tiles with doNotWarp = true.
 	// Run this pass every frame.
 	void CalcCornerCoords();
-
-	void SetMousePosition(int x, int y);
 
 	void Init();
 	void Update(bool isClicked, int margin, int regionSize);
