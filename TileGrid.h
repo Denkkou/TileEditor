@@ -11,10 +11,6 @@
 #define GRIDXSIZE int(32)
 #define GRIDYSIZE int(32)
 
-// The Tile Grid is the region of the Editor Space that contains the tiles
-// that can be clicked and edited. The "tool" mode is selected within the
-// Editor Space and passed into here to be set as the current tool.
-
 class TileGrid
 {
 private:
@@ -28,6 +24,15 @@ public:
 
 	void SetTool(int tool);
 	std::string GetToolFromEnum(int tool);
+
+	void applyToolToTile(int tool, int gridX, int gridY);
+
+	// Unimplemented - Calculate where a tile's corner coordinates should move to
+	// in order to have no vertical gaps in elevation. Each corner should be evaluated
+	// with the three neighbouring corners of the adjacent tiles and set them to an average
+	// of their original height value. Do not do this to tiles with doNotWarp = true.
+	// Run this pass every frame.
+	void CalcCornerCoords();
 
 	void SetMousePosition(int x, int y);
 

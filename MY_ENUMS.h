@@ -10,6 +10,8 @@ namespace tool_enum
 
 		addCollisionFlag,
 		rmvCollisionFlag,
+		addWarpFlag,
+		rmvWarpFlag,
 
 		setEmpty,
 		setSoil,

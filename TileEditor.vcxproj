@@ -128,7 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="EditorSpace.cpp" />
-    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="TileEditor.cpp" />
     <ClCompile Include="Tile.cpp" />
     <ClCompile Include="TileGrid.cpp" />
     <ClCompile Include="Timer.cpp" />

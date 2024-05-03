@@ -49,18 +49,59 @@ void EditorSpace::Input()
 		if (event.type == SDL_KEYDOWN && !event.key.repeat) {
 			//SDL_Log("[KEY DOWN] time %d; code %d; char %s;", event.key.timestamp, keyPressed, SDL_GetKeyName(keyPressed));
 
+			// Set to true when key is pressed
 			switch (event.key.keysym.sym) {
-			case SDLK_ESCAPE: { done = true; break; }
-			case SDLK_1: { gKeys[SDLK_1] = true; tileGrid.SetTool(tool_enum::raiseHeight); break; }			// Raise Height
-			case SDLK_2: { gKeys[SDLK_2] = true; tileGrid.SetTool(tool_enum::lowerHeight); break; }			// Lower Height
-			case SDLK_3: { gKeys[SDLK_3] = true; tileGrid.SetTool(tool_enum::resetHeight); break; }			// Reset Height
-			case SDLK_4: { gKeys[SDLK_4] = true; tileGrid.SetTool(tool_enum::addCollisionFlag); break; }	// Add Collision Flag
-			case SDLK_5: { gKeys[SDLK_5] = true; tileGrid.SetTool(tool_enum::rmvCollisionFlag); break; }	// Remove Collision Flag
-			case SDLK_q: { gKeys[SDLK_q] = true; tileGrid.SetTool(tool_enum::setEmpty); break; }			// Set tile type to Empty
-			case SDLK_w: { gKeys[SDLK_w] = true; tileGrid.SetTool(tool_enum::setSoil); break; }				// Set tile type to Soil
-			case SDLK_e: { gKeys[SDLK_e] = true; tileGrid.SetTool(tool_enum::setGrass); break; }			// Set tile type to Grass
-			case SDLK_r: { gKeys[SDLK_r] = true; tileGrid.SetTool(tool_enum::setStone); break; }			// Set tile type to Stone
-			case SDLK_t: { gKeys[SDLK_t] = true; tileGrid.SetTool(tool_enum::setPath); break; }				// Set tile type to Path
+			case SDLK_ESCAPE: 
+				done = true; 
+				break;
+			case SDLK_1:
+				gKeys[SDLK_1] = true; 
+				tileGrid.SetTool(tool_enum::raiseHeight); 
+				break;
+			case SDLK_2: 
+				gKeys[SDLK_2] = true; 
+				tileGrid.SetTool(tool_enum::lowerHeight); 
+				break;
+			case SDLK_3: 
+				gKeys[SDLK_3] = true; 
+				tileGrid.SetTool(tool_enum::resetHeight); 
+				break;
+			case SDLK_4: 
+				gKeys[SDLK_4] = true; 
+				tileGrid.SetTool(tool_enum::addCollisionFlag); 
+				break;
+			case SDLK_5: 
+				gKeys[SDLK_5] = true; 
+				tileGrid.SetTool(tool_enum::rmvCollisionFlag); 
+				break;
+			case SDLK_a: 
+				gKeys[SDLK_a] = true; 
+				tileGrid.SetTool(tool_enum::addWarpFlag); 
+				break;
+			case SDLK_s: 
+				gKeys[SDLK_s] = true; 
+				tileGrid.SetTool(tool_enum::rmvWarpFlag); 
+				break;
+			case SDLK_q: 
+				gKeys[SDLK_q] = true; 
+				tileGrid.SetTool(tool_enum::setEmpty); 
+				break;
+			case SDLK_w: 
+				gKeys[SDLK_w] = true; 
+				tileGrid.SetTool(tool_enum::setSoil); 
+				break;
+			case SDLK_e: 
+				gKeys[SDLK_e] = true; 
+				tileGrid.SetTool(tool_enum::setGrass); 
+				break;
+			case SDLK_r: 
+				gKeys[SDLK_r] = true; 
+				tileGrid.SetTool(tool_enum::setStone); 
+				break;
+			case SDLK_t: 
+				gKeys[SDLK_t] = true; 
+				tileGrid.SetTool(tool_enum::setPath); 
+				break;
 			}
 		}
 
@@ -69,16 +110,42 @@ void EditorSpace::Input()
 			//SDL_Log("[KEY UP]time %d; code %d; char %s;", event.key.timestamp, keyPressed, SDL_GetKeyName(keyPressed));
 
 			switch (event.key.keysym.sym) {
-			case SDLK_1: { gKeys[SDLK_1] = false; break; }
-			case SDLK_2: { gKeys[SDLK_2] = false; break; }
-			case SDLK_3: { gKeys[SDLK_3] = false; break; }
-			case SDLK_4: { gKeys[SDLK_4] = false; break; }
-			case SDLK_5: { gKeys[SDLK_5] = false; break; }
-			case SDLK_q: { gKeys[SDLK_q] = false; break; }
-			case SDLK_w: { gKeys[SDLK_w] = false; break; }
-			case SDLK_e: { gKeys[SDLK_e] = false; break; }
-			case SDLK_r: { gKeys[SDLK_r] = false; break; }
-			case SDLK_t: { gKeys[SDLK_t] = false; break; }
+			case SDLK_1:
+				gKeys[SDLK_1] = false; 
+				break;
+			case SDLK_2:
+				gKeys[SDLK_2] = false; 
+				break;
+			case SDLK_3:
+				gKeys[SDLK_3] = false; 
+				break;
+			case SDLK_4:
+				gKeys[SDLK_4] = false; 
+				break;
+			case SDLK_5:
+				gKeys[SDLK_5] = false; 
+				break;
+			case SDLK_q:
+				gKeys[SDLK_q] = false; 
+				break;
+			case SDLK_w:
+				gKeys[SDLK_w] = false; 
+				break;
+			case SDLK_e:
+				gKeys[SDLK_e] = false; 
+				break;
+			case SDLK_r:
+				gKeys[SDLK_r] = false; 
+				break;
+			case SDLK_t:
+				gKeys[SDLK_t] = false; 
+				break;
+			case SDLK_a:
+				gKeys[SDLK_a] = false; 
+				break;
+			case SDLK_s:
+				gKeys[SDLK_s] = false; 
+				break;
 			}
 		}
 
