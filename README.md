@@ -12,6 +12,7 @@ Written in C++ using SDL2.
 Currently only basic inputs are handled for each tool.
 - 1: Raise height 2: Lower height 3: Reset height 4: Add collision 5: Remove collision
 - Q: Set to empty W: Set to soil E: Set to grass R: Set to stone T: Set to path
+- A: Set warping to true S: Set warping to false
 
 #### Tile properties
 Each tile has a series of properties. These can be expanded in Tile.h
@@ -19,6 +20,8 @@ Each tile has a series of properties. These can be expanded in Tile.h
 - Elevation
 - Collision flag
 - Type (Cosmetic; Empty / Soil / Grass / Stone / Path)
+- Warping flag (Allow tile to have corner vertices moved to stitch terrain)
+- Coordinate X Y Z arrays for each of the four corners
 
 ## Planned Features
 - Visually display elevation and collision properties on each tile
