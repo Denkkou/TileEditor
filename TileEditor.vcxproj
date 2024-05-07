@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{eaa79a00-5ffe-413f-b82f-eca791e2d6f4}</ProjectGuid>
+    <ProjectGuid>{649dc9d0-c4de-4454-aa35-08e81589dfac}</ProjectGuid>
     <RootNamespace>TileEditor</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -127,26 +127,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Button.cpp" />
-    <ClCompile Include="ButtonPanel.cpp" />
-    <ClCompile Include="EditorSpace.cpp" />
+    <ClCompile Include="Editor.cpp" />
     <ClCompile Include="TileEditor.cpp" />
-    <ClCompile Include="Tile.cpp" />
-    <ClCompile Include="TileGrid.cpp" />
-    <ClCompile Include="Timer.cpp" />
+    <ClCompile Include="TileGridPane.cpp" />
+    <ClCompile Include="TilePalettePane.cpp" />
+    <ClCompile Include="UtilityPane.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Button.h" />
-    <ClInclude Include="ButtonPanel.h" />
-    <ClInclude Include="Clickable.h" />
-    <ClInclude Include="EditorSpace.h" />
-    <ClInclude Include="MY_ENUMS.h" />
-    <ClInclude Include="Tile.h" />
-    <ClInclude Include="TileGrid.h" />
+    <ClInclude Include="Editor.h" />
+    <ClInclude Include="Pane.h" />
+    <ClInclude Include="TileGridPane.h" />
+    <ClInclude Include="TilePalettePane.h" />
     <ClInclude Include="Timer.h" />
+    <ClInclude Include="Tool.h" />
+    <ClInclude Include="UtilityPane.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

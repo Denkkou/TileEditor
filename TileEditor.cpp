@@ -1,10 +1,8 @@
-#include <iostream>
-#include <string>
 #include <SDL.h>
 
-#include "EditorSpace.h"
+#include "Editor.h"
 
-EditorSpace editorSpace;
+Editor editor;
 
 int main(int argc, char* argv[])
 {
@@ -15,8 +13,8 @@ int main(int argc, char* argv[])
         SDL_LogError(SDL_LOG_CATEGORY_ERROR, "SDL_Init failed!");
 
     // Start editor space
-    editorSpace.Init();
-    editorSpace.Run();
+    editor.Init();
+    editor.Run();
 
     SDL_Quit();
     return 0;

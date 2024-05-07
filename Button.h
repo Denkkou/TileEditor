@@ -1,31 +1,25 @@
-#ifndef aButtonFILE
-#define aButtonFILE
+#pragma once
 
-#include "MY_ENUMS.h"
 #include <SDL.h>
+
+#include "Tool.h"
 
 class Button
 {
 private:
+	Tool* assignedTool = nullptr;
 
-	int assignedTool;
 	int xPos;
 	int yPos;
 	int width;
 	int height;
 public:
 	Button();
-	Button(int x, int y, int w, int h, int tool);
+	Button(int x, int y, int w, int h, Tool* toolToAssign);
+	~Button();
 
-	// Only in leu of sprites
-	int topColour = 100;
-	int shadowColour = 50;
+	// Get pointer to assigned tool
+	Tool* OnClick();
 
-	bool isToggled = false;
-
-	int checkIfClicked(int mPosX, int mPosY);
-
-	void Render(SDL_Renderer* aRenderer);
+	void Render(SDL_Renderer* renderer);
 };
-
-#endif

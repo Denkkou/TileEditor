@@ -18,22 +18,16 @@
     <ClCompile Include="TileEditor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="EditorSpace.cpp">
+    <ClCompile Include="Editor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Timer.cpp">
+    <ClCompile Include="TilePalettePane.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TileGrid.cpp">
+    <ClCompile Include="UtilityPane.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Tile.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ButtonPanel.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Button.cpp">
+    <ClCompile Include="TileGridPane.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -41,28 +35,28 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="EditorSpace.h">
+    <ClInclude Include="Editor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Timer.h">
+    <ClInclude Include="Pane.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="TileGrid.h">
+    <ClInclude Include="Tool.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MY_ENUMS.h">
+    <ClInclude Include="TileGridPane.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Tile.h">
+    <ClInclude Include="UtilityPane.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ButtonPanel.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Clickable.h">
+    <ClInclude Include="TilePalettePane.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Button.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

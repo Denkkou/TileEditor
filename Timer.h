@@ -1,5 +1,4 @@
-#ifndef aTimerFILE
-#define aTimerFILE
+#pragma once
 
 #include <SDL.h>
 
@@ -8,10 +7,8 @@ class Timer
 private:
 	int startTicks;
 public:
-	Timer();
+	Timer() { startTicks = 0; };
 
-	void ResetTicks();
-	int GetTicks();
+	void ResetTicks() { startTicks = SDL_GetTicks(); };
+	int GetTicks() { return (SDL_GetTicks() - startTicks); };
 };
-
-#endif
