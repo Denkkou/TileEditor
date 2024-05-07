@@ -68,7 +68,7 @@ void Editor::Input()
 		// Pass position & click state to panes
 		for (auto pane : panes) {
 			pane->Input(mPosX, mPosY, clicked);
-		}
+		}	
 	}
 }
 

@@ -15,7 +15,9 @@ UtilityPane::~UtilityPane()
 
 void UtilityPane::Update()
 {
-	if (clicked) {
+	if (MouseWithinPaneBounds() && clicked) {
+		SDL_Log("Click occured within UtilityPane");
+
 		// Calculate which button clicked in etc
 		// ...
 

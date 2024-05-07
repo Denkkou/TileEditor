@@ -15,7 +15,9 @@ TilePalettePane::~TilePalettePane()
 
 void TilePalettePane::Update()
 {
-	if (clicked) {
+	if (MouseWithinPaneBounds() && clicked) {
+		SDL_Log("Click occured within TilePalettePane");
+
 		// Calculate which palette button clicked
 		// ...
 

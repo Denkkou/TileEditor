@@ -15,15 +15,17 @@ TileGridPane::~TileGridPane()
 
 void TileGridPane::Update()
 {
-	if (clicked) {
-		// Calculate which tile clicked in etc
-		// ...
+	if (MouseWithinPaneBounds() && clicked) {
+		SDL_Log("Click occured within TileGridPane");
 
 		// Catch empty tool
 		if (currentTool == nullptr) {
-			SDL_Log("No tool currently selected!");
+			//SDL_Log("No tool currently selected!");
 			return;
 		}
+
+		// Calculate which tile clicked in etc
+		// ...
 
 		// If currentTool.name == abc, apply abc to clicked tile, then return (prevent cascading down each if)
 		// ...

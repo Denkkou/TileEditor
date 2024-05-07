@@ -42,9 +42,9 @@ public:
 	SDL_Renderer* renderer;
 
 	// Panes (xPos, yPos, width, height, tool ptr)
-	TileGridPane tileGridPane{ 0, 0, 10, 10, currentTool };
-	TilePalettePane tilePalettePane{ 50, 50, 10, 10, currentTool };
-	UtilityPane utilityPane{ 100, 100, 10, 10, currentTool };
+	TileGridPane tileGridPane{ 1, 1, 658, 658, currentTool };			// Numbers skewed to allow for 1px borders for debug
+	TilePalettePane tilePalettePane{ 660, 1, 339, 338, currentTool };
+	UtilityPane utilityPane{ 660, 340, 339, 319, currentTool };
 
 	// Member Functions
 	void Init();

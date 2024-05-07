@@ -34,4 +34,9 @@ public:
 
 	virtual void Update() = 0;
 	virtual void Render(SDL_Renderer* renderer) = 0;
+
+	bool MouseWithinPaneBounds() {
+		if (mPosX >= originX && mPosY >= originY && mPosX <= originX + paneWidth && mPosY <= originY + paneHeight) { return true; }
+		else { return false; }
+	}
 };
