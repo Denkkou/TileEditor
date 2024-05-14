@@ -5,6 +5,7 @@
 class TileGridPane : public Pane
 {
 private:
+	int gridDimension = 32;	// Default 32
 public:
 	TileGridPane(int x, int y, int w, int h, Tool* currTool);
 	~TileGridPane();

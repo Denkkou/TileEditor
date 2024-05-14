@@ -14,7 +14,7 @@ void Editor::Init()
 	window = SDL_CreateWindow("Tile Editor v0.2", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREENXRES, SCREENYRES, 0);
 	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 
-	// Add panes to vector
+	// Add panes to vector (order dictates draw order
 	panes.push_back(&tileGridPane);
 	panes.push_back(&tilePalettePane);
 	panes.push_back(&utilityPane);

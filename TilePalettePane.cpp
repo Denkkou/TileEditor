@@ -30,6 +30,6 @@ void TilePalettePane::Render(SDL_Renderer* renderer)
 {
 	// Default drawing
 	SDL_Rect paneBG = { originX, originY, paneWidth, paneHeight };
-	SDL_SetRenderDrawColor(renderer, defaultDrawColour.r, defaultDrawColour.g, defaultDrawColour.b, defaultDrawColour.a);
+	SDL_SetRenderDrawColor(renderer, 219, 197, 136, defaultDrawColour.a);
 	SDL_RenderFillRect(renderer, &paneBG);
 }
